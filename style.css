@@ -935,3 +935,26 @@ footer{
     color: transparent;
     user-select: none;
 }
+
+/* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>    All for ScrollBar */
+
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(transparent,#f54e26);
+    border-radius: 12px;
+    transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(transparent,#f76743);
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:active{
+    background:linear-gradient(transparent,#f767438a);
+    border-radius: 12px;
+}
