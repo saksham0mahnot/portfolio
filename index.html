@@ -57,6 +57,7 @@
       </div>
       <div class="sub_section_two">
         <div class="sub_section_bar">
+          <div class="bar2"></div>
           <div class="bar">
             <marquee scrollamount="20" behavior="scroll" data-aos="slide-left">
               <ul>
@@ -445,21 +446,24 @@
   </div>
 
   <script src="app.js"></script>
-  <!-- Setup and start animation! -->
-  <script>
-      var typed = new Typed("#element", {
-        strings: ["mobile apps", "websites", "ui/ux", "things"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-      });
-      document.querySelector(".year").innerHTML=(new Date().getFullYear());
-  </script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-      AOS.init(
-
+      AOS.init({
+        once:false
+      }
       );
     </script>
+  <script>
+    var typed = new Typed("#element", {
+      strings: ["mobile apps", "websites", "ui/ux", "things"],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true
+    });
+    document.querySelector(".year").innerHTML=(new Date().getFullYear());
+</script>
   </body>
+  <script src="app.js"></script>
+
 </html>
