@@ -1,0 +1,682 @@
+@media(max-width:1550px){
+    .bar ul li{
+    font-size:60px;
+    }
+}
+
+@media(max-width:1450px){
+    .sub_section_bar div{
+    padding:20px 0;
+    /* background-color: blue; */
+    }
+
+    .bar ul li{
+    font-size:50px;
+    }
+}
+
+
+@media only screen and (max-width:1225px){ 
+
+    .section_first div{
+        width: 600px;
+    }
+
+    .container p{
+        font-size: 18px ;
+    }
+    
+    .container h1{
+        font-size: 45px ;
+    }
+
+    .container h3{
+        font-size: 25px;
+    }
+    
+    .sub_section_bar div{
+    padding:15px 0;
+    /* background-color: violet; */
+
+    }
+    
+    .bar ul li{
+    font-size:40px;
+    }
+
+    .section_three .lab h1{
+        /* background-color: brown; */
+        margin: 0 0 50px 120px ;
+    }
+    
+    .info h1{
+        /* background-color: brown; */
+        margin: 5px 0 50px 120px !important ;
+    }
+
+    .fullname h1{
+    font-size: 123px !important;
+    }
+
+    .profile_photo img{
+        height: 450px !important;
+        /* border: 5px solid red; */   
+    }
+
+    .code_line{
+        /* background-color: aqua !important; */
+        width: 600px !important;
+    }
+
+    .timeline{
+        margin-top: 150px !important;
+        height: 930px !important;
+        margin-bottom: 54px !important;
+    }
+}
+
+@media(max-width:998px){
+
+    .section_first div{
+        width: 500px;
+    }
+
+    .container p{
+        font-size: 12px ;
+    }
+    
+    .container h1{
+        font-size: 35px ;
+    }
+
+    .container h3{
+        font-size: 18px;
+    }
+
+    .sub_section_bar div {
+    width :105vw;
+    padding:0px 0;
+    /* background-color: yellow; */
+    }
+    
+    .bar ul li{
+    font-size:25px;
+    }
+
+    .section_three .lab h1{
+        /* background-color: brown; */
+        margin: 0 0 50px 100px;
+    }
+    
+    .info h1{
+        /* background-color: brown; */
+        margin: 5px 100px 50px 100px !important;
+    }
+
+    .fullname h1{
+        font-size: 95px !important;
+        /* background-color: green; */
+    }
+
+    .profile_photo{
+       margin-top: -68px !important;
+    
+    }
+
+    .profile_photo img{
+        height: 400px !important;        
+    }
+
+    .section_three{
+        margin-bottom: 80px !important;
+    }
+
+
+}
+
+@media only screen and (max-width:880px) {
+    html{
+        width: 105vw;
+    }
+    .section_two{
+    height: 35vh !important;
+    }
+    .item_two h1{
+        font-size:4.7rem;
+        line-height: normal;
+
+    }
+}
+
+
+@media only screen and (max-width:830px){
+    .section_first{
+        width: 105vw;
+    }
+    .section_first div{
+        width: 500px;
+    }
+
+    .container p{
+        font-size: 12px ;
+    }
+    
+    .container h1{
+        font-size: 33px ;
+    }
+
+    .container h3{
+        font-size: 18px;
+    }
+
+    .item_two h1{
+        font-size:4.4rem;
+        cursor: none;
+        line-height: normal;
+    }
+
+    .fullname h1{
+        font-size: 80px !important;
+        /* background-color: green; */
+        
+    }
+}
+
+@media only screen and (max-width:782px) {   
+    .item_two h1{
+        font-size:4rem;
+        line-height: normal;
+    }
+
+    .fullname h1{
+        font-size: 75px !important;
+    }
+
+    .profile_photo{
+        margin-top: -45px !important;
+     
+     }
+ 
+     .profile_photo img{
+         height: 400px !important;        
+     }
+
+     .section_three{
+        margin-bottom: 70px !important;
+    }
+
+    .offset{
+    flex-basis: 100% !important;
+
+    }
+    .code_line{
+        /* background-color: aqua !important; */
+        width: 550px !important;
+    }
+
+    .timeline{
+        /* margin-top: 150px !important; */
+        height: 990px !important;
+        margin-bottom: -11px !important;
+    }
+
+    .code_line div{
+        /* background-color: aquamarine !important; */
+        font-size :14.5px !important;
+    }
+
+    .contact_form form{
+        width: 650px !important;
+    }
+    
+}
+
+@media only screen and (max-width:732px) {
+    html{
+        width: 120vw;
+    }
+
+    .section_first{
+        width: 120vw;
+    }
+
+    .home div{
+        width: 120vw;
+    }
+
+    .item_two h1{
+        font-size:3.5rem;
+        cursor: none;
+        line-height: normal;
+
+    }
+
+    .sub_section_bar div {
+        width :120vw;    
+        /* background-color: green; */
+    }
+}
+
+@media only screen and (max-width:660px){
+
+    html{
+        width: 189vw;
+    }
+
+    .section_first{
+        width: 100vw;
+        height: 70vh;
+    }
+
+    .section_first div{
+        width: 500px;
+        margin: 0 80px;
+    }
+
+    .container p{
+        font-size: 12px ;
+    }
+    
+    .container h1{
+        font-size: 33px ;
+    }
+
+    .container h3{
+        font-size: 17px;
+    }
+
+    .sub_section_bar div {
+    width :188vw;    
+    /* background-color: green; */
+    }
+    
+    .bar ul li{
+    font-size:18px;
+    }
+
+    .item_two h1{
+        font-size:3rem;
+        cursor: none;
+        line-height: normal;
+
+    }
+
+    .section_three{
+        height: 1200px !important;
+        margin-bottom: 0px !important;
+    
+    }
+    .section_three .lab h1{
+        /* background-color: brown; */
+        margin: 0 0 50px 10px;
+    }
+
+    .info h1{
+        font-size: 15px !important;    
+        /* background-color: brown; */
+        margin: 5px 10px 50px 10px !important;
+    }
+
+    .fullname h1{
+        font-size: 65px !important;
+    }
+
+    .profile_photo{
+        margin-top: -38px !important;
+     }
+ 
+    .bio{
+        width: 500px !important;
+
+
+     }
+    #bio{
+        font-size: 35px !important;
+     }
+
+    .grid{
+        margin-bottom: 50px !important;
+    }
+
+
+    .offset{
+        flex-basis: 100% !important;
+    
+        }
+    .code_line{
+            width: 440px !important;
+        }
+    
+    .timeline{
+            height: 990px !important;
+            margin-bottom: -11px !important;
+        }
+    
+    .code_line div{
+            font-size :13px !important;
+            line-height :23.6px;
+
+        }
+
+    .contact_form form{
+        width: 500px !important;
+    }
+
+    .connect div h6{
+        width: 556px !important;
+    }
+}
+
+
+@media only screen and (max-width:550px) {
+    
+    
+    .item_two h1{
+        font-size:2.4rem;
+        line-height: normal;
+        cursor: none; 
+    }
+    .section_two{
+        height: 10vh !important;
+        padding: 50px 20px 150px 20px !important;
+        margin: 50px 0 150px 0; 
+    }
+
+    .fullname h1{
+        font-size: 50px !important;
+    }
+
+
+
+
+    .offset{
+        flex-basis: 100% !important;
+        max-width: 90% !important;
+        }
+    .code_line{
+            width: 350px !important;
+        }
+    
+    .timeline{
+            height: 990px !important;
+            margin-bottom: -11px !important;
+        }
+    
+    .code_line div{
+            font-size :13px !important;
+            line-height :23.3px;
+    }
+
+}
+
+
+@media only screen and (max-width:590px){
+    .section_first{
+        width: 100vw;
+        height: 70vh;
+    }
+
+    .section_first div{
+        width: 350px;
+        margin: 0 40px;
+    }
+
+    .container p{
+        font-size: 12px ;
+    }
+    
+    .container h1{
+        font-size: 23px ;
+    }
+
+    .container h3{
+        font-size: 18px;
+    }
+    
+}
+
+@media only screen and (max-width:420px) {
+    .section_first{
+        width: 100vw;
+        height: 60vh;
+    }
+
+    .section_first div{
+        width: 300px;
+        margin: 0 50px;
+    }
+
+    .container p{
+        font-size: 10px ;
+    }
+    
+    .container h1{
+        font-size: 20px ;
+    }
+
+    .container h3{
+        font-size: 15px;
+    }
+
+    .item_two h1{
+        font-size:1.9rem !important;
+        line-height: normal;
+        cursor: none; 
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+        max-height: 700px !important;
+        /* background-color: green; */
+    }
+
+    .box1{
+        width: 70% !important;
+    }
+    .box1 h1{
+        margin: 10px  !important;
+        font-size: 25px !important;
+    }
+
+    .box1 p a{
+        font-size: 15px !important;
+    }
+
+    .fullname h1{
+        font-size: 40px !important;
+    }
+
+    .profile_photo{
+        margin-top: -25px !important;
+     
+     }
+ 
+     .profile_photo img{
+         height: 200px !important;        
+     }
+
+    .bio{
+        width: 350px !important;
+     }
+
+    .offset{
+        flex-basis: 100% !important;
+        max-width: 90% !important;
+        }
+
+    .code_line{
+            width: 280px !important;
+        }
+    
+    .timeline{
+            height: 700px !important;
+            margin-bottom: 300px !important;
+        }
+    
+    .code_line div{
+            font-size :10px !important;
+            line-height :15.6px;
+    }
+
+    .contact_form form{
+        width: 300px !important;
+    }
+
+    .btns{
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .btn, .btn2 {
+        margin: 30px 10px !important;
+        font-size: 18px !important;
+        padding: 17px 50px !important;
+        background-position: 0 25% !important;
+    
+    }
+
+    .connect div h1{
+        /* width: 356px !important; */
+        font-size: 60px !important;
+    }
+
+    .connect div h6{
+        width: 340px !important;
+        font-size: 15px !important;
+        line-height: 26px !important;    
+    }
+
+    footer{
+        padding: 30px !important;
+    }
+    .foot_one{
+        font-size: 10px !important;
+        /* width: 100% !important; */
+        line-height: 21px;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    .section_first{
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .section_first div{
+        width: 250px;
+        margin: 0 20px;
+    }
+
+    .container p{
+        font-size: 10px ;
+    }
+    
+    .container h1{
+        font-size: 17px ;
+    }
+
+    .container h3{
+        font-size: 15px;
+    }
+
+    .section_two{
+        height: 5vh !important;
+        padding: 20px !important;
+        margin: 20px 0 190px 0; 
+    }
+    .item_two h1{
+        font-size:1.6rem !important;
+        line-height: normal;
+        cursor: none; 
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+        max-height: 700px !important;
+        /* background-color: green; */
+    }
+
+    .box1{
+        width: 70% !important;
+    }
+    .box1 h1{
+        margin: 10px  !important;
+        font-size: 23px !important;
+    }
+
+    .box1 p a{
+        font-size: 14px !important;
+    }
+
+    .fullname h1{
+        font-size: 35px !important;
+    }
+
+    .profile_photo{
+        margin-top: -20px !important;
+     
+     }
+ 
+     .profile_photo img{
+         height: 150px !important;        
+     }
+
+    .bio{
+        width: 250px !important;
+     }
+
+    #bio{
+        font-size: 25px !important;
+    }
+    .offset{
+        flex-basis: 100% !important;
+        max-width: 90% !important;
+        }
+
+    .code_line{
+            width: 230px !important;
+        }
+    
+    .timeline{
+            height: 700px !important;
+            margin-bottom: 290px !important;
+        }
+    
+    .code_line div{
+            font-size :8.3px !important;
+            line-height :15.6px;
+    }
+
+    .contact_form form{
+        width: 250px !important;
+    }
+
+    .btn, .btn2 {
+        margin: 30px 5px !important;
+        font-size: 15px !important;
+        padding: 17px 40px !important;
+        background-position: 0 25% !important;
+    }
+
+    .connect div h1{
+        /* width: 356px !important; */
+        font-size: 50px !important;
+    }
+
+    .connect div h6{
+        width: 250px !important;
+        font-size: 12px !important;
+        line-height: 15px !important;    
+    }
+
+    footer{
+        padding: 30px !important;
+    }
+    .foot_one{
+        font-size: 8.5px !important;
+        /* width: 100% !important; */
+        line-height: 21px;
+    }
+}
