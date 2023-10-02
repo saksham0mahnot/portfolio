@@ -73,7 +73,7 @@ html , body{
 }
 
 .section_first{
-    background-image:url(img/bg-2.jpg);
+    background-image:url(./img/bg-2.webp);
     background-size: cover;
     height: 90vh;
     background-position: center;
@@ -325,7 +325,7 @@ hr{
 .section_three{
     height: 1300px;
     background-color: #1c1c1c;
-    padding-top:200px ;
+    padding-top:100px ;
     margin-bottom: 200px;
 }
 
@@ -335,7 +335,6 @@ hr{
     font-weight: 100;
     font-size: 18px;
 }
-
 
 .info h1{
     font-family: one;
@@ -802,7 +801,7 @@ footer{
 }
 
 .icon_float a:hover{
-    background: var(--color-bg);
+    background: var(--red);
     color: var(--color-white);
     cursor: pointer;
 }
