@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="description"
+  content="Discover the ultimate interactive travel planner that customizes your journey, offering personalized itineraries, local insights, and seamless booking options for unforgettable adventures." />
+  <title>Safarr</title>
+  <link rel="shortcut icon" href="./images/nomad.jpeg" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/safarr.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" href="./css/jarallax.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/style_1.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="stylesheet" href="css/mbr-additional.css" type="text/css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&amp;display=swap&amp;display=swap" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&display=swap&display=swap" />
+  </noscript>
+
+<style>
+  .navbar-buttons .btn {
+    background-color: #007bff; /* Primary blue color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.4s, transform 0.4s; /* Smooth transition */
+  }
+  
+  .navbar-buttons .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.3); /* Slightly enlarge on hover */
+  }
+  
+  .navbar-buttons .btn:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
+  }
+  
+</style>
+  <!-- linkes and all  -->
+</head>
+<body>
+<!-- Navigation Bar -->
+<section data-bs-version="5.1" class="menu menu2 cid-ukF9jwpTl6" once="menu" id="menu-5-ukF9jwpTl6">
+  <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+    <div class="container">
+      <div class="navbar-brand">
+        <span class="navbar-logo">
+          <a href="index.html">
+            <img src="images/nomad.jpeg" alt="Image" style="height: 4.3rem" />
+          </a>
+        </span>
+        <span class="navbar-caption-wrap">
+          <a class="navbar-caption text-black display-4" href="index.html"> Safarr</a>
+        </span>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+        data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="plan.html">Plan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="explore.html" aria-expanded="false">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="./Contact.html">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="navbar-buttons mbr-section-btn d-flex">
+          <a class="btn btn-secondary display-4 me-2" id="form-open">Login</a>
+          <a class="btn btn-secondary display-4 me-2" id="logout" style="display:none;">Sign Out</a>
+          <a class="btn btn-secondary display-4" id="manageProfile" style="display:none;">Profile</a>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+</section>
+
+<!-- Login Section -->
+<section class="home">
+  <div class="form_container">
+    <i class="uil uil-times form_close"></i>
+
+    <!-- Login Form -->
+    <div class="form login_form">
+      <form id="loginForm">
+        <h2>Login</h2>
+        <div class="input_box">
+          <input type="email" id="lemail" name="lemail" placeholder="Enter your email" required />
+          <p id="lemail_error"></p>
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" id="lpass" placeholder="Enter your password" required />
+          <p id="lpass_error"></p>
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide" onclick="togglePasswordVisibility('lpass')"></i>
+        </div>
+
+        <div class="option_field">
+          <span class="checkbox">
+            <input type="checkbox" id="check" />
+            <label for="check">Remember me</label>
+          </span>
+          <a href="#" class="forgot_pw" id="forgotPassword">Forgot password?</a>
+        </div>
+        <button type="button" class="button" id="login">Login Now</button>
+        <div class="login_signup">Don't have an account? <a href="#" id="showSignup">Signup</a></div>
+      </form>
+    </div>
+
+    <!-- Signup Form (Initially hidden) -->
+    <div class="form signup_form" style="display: none;">
+      <form id="signupForm">
+        <h2>Signup</h2>
+        <div class="input_box">
+          <input type="email" id="semail" name="semail" placeholder="Enter your email" required />
+          <p id="semail_error"></p>
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" id="spass" placeholder="Enter your password" required />
+          <p id="spass_error"></p>
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide" onclick="togglePasswordVisibility('spass')"></i>
+        </div>
+        <button type="button" class="button" id="signup">Signup Now</button>
+        <div class="login_signup">Already have an account? <a href="#" id="showLogin">Login</a></div>
+      </form>
+    </div>
+  </div>
+
+<!-- Firebase and Authentication Script -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, sendPasswordResetEmail, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+  // Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAcwlOZXue17fZxWrAUUHqv3ghMyqp2llk",
+    authDomain: "safarr-a9956.firebaseapp.com",
+    projectId: "safarr-a9956",
+    storageBucket: "safarr-a9956.appspot.com",
+    messagingSenderId: "439637732942",
+    appId: "1:439637732942:web:c1b05a649bbf0df0ccdd1f",
+    measurementId: "G-EJWJXK03P2"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Check if the user is logged in
+  onAuthStateChanged(auth, (user) => {
+    const loginButton = document.getElementById('form-open');
+    const logoutButton = document.getElementById('logout');
+    const manageProfileButton = document.getElementById('manageProfile');
+
+    if (user) {
+      // User is logged in
+      loginButton.style.display = 'none';
+      logoutButton.style.display = 'block';
+      manageProfileButton.style.display = 'block'; // Show Manage Profile button
+      console.log("User logged in: ", user.email);
+    } else {
+      // No user is signed in
+      loginButton.style.display = 'block';
+      logoutButton.style.display = 'none';
+      manageProfileButton.style.display = 'none'; // Hide Manage Profile button
+    }
+  });
+
+  // Login functionality
+  document.getElementById("login").addEventListener("click", function () {
+    const email = document.getElementById("lemail").value;
+    const password = document.getElementById("lpass").value;
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("Logged in as:", user.email);
+        alert(user.email + " logged in successfully!");
+        window.location.href = "index.html"; // Redirect to homepage
+      })
+      .catch((error) => {
+        console.error("Login failed:", error.message);
+        alert(error.message);
+      });
+  });
+
+  // Signup functionality
+  document.getElementById("signup").addEventListener("click", function () {
+    const email = document.getElementById("semail").value;
+    const password = document.getElementById("spass").value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("Signed up as:", user.email);
+        alert("Account created for " + user.email);
+        window.location.href = "index.html"; // Redirect to homepage after signup
+      })
+      .catch((error) => {
+        console.error("Signup failed:", error.message);
+        alert(error.message);
+      });
+  });
+
+  // Forgot Password functionality
+  document.getElementById("forgotPassword").addEventListener("click", function () {
+    const email = document.getElementById("lemail").value;
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        alert("Password reset email sent to " + email);
+      })
+      .catch((error) => {
+        console.error("Error sending reset email:", error.message);
+        alert(error.message);
+      });
+  });
+
+  // Logout functionality
+  document.getElementById("logout").addEventListener("click", function () {
+    signOut(auth)
+      .then(() => {
+        console.log("User signed out");
+        alert("You have signed out.");
+        window.location.href = "index.html"; // Redirect to homepage after sign out
+      })
+      .catch((error) => {
+        console.error("Sign-out error:", error.message);
+        alert(error.message);
+      });
+  });
+
+  // Show Manage Profile functionality
+  document.getElementById("manageProfile").addEventListener("click", function () {
+    window.location.href = "edit_setting.html"; // Redirect to edit settings page
+  });
+
+  // Show/Hide password
+  function togglePasswordVisibility(id) {
+    const input = document.getElementById(id);
+    if (input.type === "password") {
+      input.type = "text";
+    } else {
+      input.type = "password";
+    }
+  }
+
+  // Show signup form
+  document.getElementById("showSignup").addEventListener("click", function () {
+    document.querySelector(".login_form").style.display = "none";
+    document.querySelector(".signup_form").style.display = "block";
+  });
+
+  // Show login form
+  document.getElementById("showLogin").addEventListener("click", function () {
+    document.querySelector(".signup_form").style.display = "none";
+    document.querySelector(".login_form").style.display = "block";
+  });
+</script>
+
+
+  <!-- Home Page -->
+  <section data-bs-version="5.1" class="header18 cid-ukF9jwrlph mbr-fullscreen"
+    data-bg-video="https://www.youtube.com/embed/QY5WDJCJkm8?autoplay=1&amp;loop=1&amp;playlist=QteuaNbXQJk&amp;t=20&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;allowfullscreen=true&amp;mode=transparent"
+    id="hero-15-ukF9jwrlph">
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0)"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="content-wrap col-12 col-md-12">
+          <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
+            <strong>Travel Smart</strong>
+          </h1>
+
+          <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">
+            Your ultimate guide to planning unforgettable adventures awaits!
+          </p>
+          <div class="mbr-section-btn">
+            <a class="btn btn-white-outline display-7" target="_blank" href="https://www.instagram.com/safarr.cu/?hl=en">Join Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2nd Section -->
+  <section data-bs-version="5.1" class="people05 cid-ukF9jwsfwa" id="testimonials-5-ukF9jwsfwa">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-12 mb-0 content-head">
+          <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+            <strong>Cheers</strong>
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item features-without-image col-12 col-md-6 col-lg-4 active">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <p class="card-text mbr-fonts-style display-7">
+                <b>Safarr</b> made my trip planning a breeze!
+              </p>
+              <div class="img-wrapper mt-4 mb-3">
+                <img src="images/photo-1676385901160-31e1b9e1c0c7.jpeg" alt="" data-slide-to="0" data-bs-slide-to="0" />
+              </div>
+              <h5 class="card-title mbr-fonts-style display-7">
+                <strong>Emily</strong>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="item features-without-image col-12 col-md-6 col-lg-4">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <p class="card-text mbr-fonts-style display-7">
+                I never knew planning could be this fun!
+              </p>
+              <div class="img-wrapper mt-4 mb-3">
+                <img src="images/photo-1575846171058-979e0c211b54.jpeg" data-slide-to="1" data-bs-slide-to="1" alt="" />
+              </div>
+              <h5 class="card-title mbr-fonts-style display-7">
+                <strong>Jake</strong>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="item features-without-image col-12 col-md-6 col-lg-4">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <p class="card-text mbr-fonts-style display-7">
+                Best travel planner ever! I’m hooked!
+              </p>
+              <div class="img-wrapper mt-4 mb-3">
+                <img src="images/photo-1595436065982-84fa400d8d8e.jpeg" data-slide-to="2" data-bs-slide-to="2" alt="" />
+              </div>
+              <h5 class="card-title mbr-fonts-style display-7">
+                <strong>Sophia</strong>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="item features-without-image col-12 col-md-6 col-lg-4">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <p class="card-text mbr-fonts-style display-7">
+                Safarr turned my chaos into a masterpiece!
+              </p>
+              <div class="img-wrapper mt-4 mb-3">
+                <img src="images/photo-1581803118522-7b72a50f7e9f.jpeg" data-slide-to="4" data-bs-slide-to="4" alt="" />
+              </div>
+              <h5 class="card-title mbr-fonts-style display-7">
+                <strong>Liam</strong>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="item features-without-image col-12 col-md-6 col-lg-4">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <p class="card-text mbr-fonts-style display-7">
+                I can’t believe I survived without this!
+              </p>
+              <div class="img-wrapper mt-4 mb-3">
+                <img src="images/photo-1629085265617-aa802730c749.jpeg" data-slide-to="6" data-bs-slide-to="6" alt="" />
+              </div>
+              <h5 class="card-title mbr-fonts-style display-7">
+                <strong>Olivia</strong>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="item features-without-image col-12 col-md-6 col-lg-4">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <p class="card-text mbr-fonts-style display-7">
+                Travel planning? More like travel partying!
+              </p>
+              <div class="img-wrapper mt-4 mb-3">
+                <img src="images/photo-1543965170-4c01a586684e.jpeg" data-slide-to="7" data-bs-slide-to="7" alt="" />
+              </div>
+              <h5 class="card-title mbr-fonts-style display-7">
+                <strong>Noah</strong>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3rd Part -->
+  <section data-bs-version="5.1" class="news08 cid-ukF9jwskqz" id="blog-2-ukF9jwskqz">
+    <div class="container-fluid parts">
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 content-head">
+          <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+              <strong>Travel Tips Galore</strong>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item features-image col-12 col-md-6 col-lg-3 active">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="images/photo-1682685797406-97f364419b4a.jpeg" alt="Safarr" title="" />
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mt-0 mb-3 top-margin1 ndisplay-3">
+                Adventure
+              </h5>
+              <h6 class="item-subtitle mbr-fonts-style mb-3 ndisplay-1">
+                <strong>Pack Like a Pro</strong>
+              </h6>
+
+              <div class="mbr-section-btn item-footer">
+                <a target="_blank" href="packlikeapro.html" class="btn item-btn btn-primary ndisplay-2">Read</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="images/photo-1463194537334-3940784aa69a.jpeg" alt="Will be working" />
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mb-3 mt-0 top-margin1 ndisplay-3">
+                Culture
+              </h5>
+              <h6 class="item-subtitle mbr-fonts-style mb-3 ndisplay-1">
+                <strong>Eat Your Way Around</strong>
+              </h6>
+
+              <div class="mbr-section-btn item-footer">
+                <a target="_blank" href="Culture.html" class="btn item-btn btn-primary ndisplay-2">Read</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="images/photo-1500964757637-c85e8a162699.jpeg" alt="working" />
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mb-3 mt-0 top-margin1 ndisplay-3">
+                Fun
+              </h5>
+              <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 ndisplay-1">
+                <strong>Travel Games for All</strong>
+              </h6>
+
+              <div class="mbr-section-btn item-footer">
+                <a target="_blank" href="Travel games.html" class="btn item-btn btn-primary ndisplay-2">Read</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="images/photo-1468818438311-4bab781ab9b8.jpeg" alt="will work" />
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mb-3 mt-0 top-margin1 ndisplay-3">
+                Budget
+              </h5>
+              <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 ndisplay-1">
+                <strong>Save Big While Traveling</strong>
+              </h6>
+
+              <div class="mbr-section-btn item-footer">
+                <a target="_blank" href="budget.html" class="btn item-btn btn-primary ndisplay-2">Read</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4th Section -->
+  <section data-bs-version="5.1" class="features023 cid-ukF9jwtkUR" id="metrics-1-ukF9jwtkUR">
+    <div class="container top-margin2">
+      <div class="row content-row justify-content-center">
+        <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+          <div class="item-wrapper">
+            <div class="title mb-2 mb-md-3">
+              <span class="num mbr-fonts-style display-1">
+                <strong>100+</strong></span>
+            </div>
+            <h4 class="card-title mbr-fonts-style display-5">
+              <strong>Happy Travelers</strong>
+            </h4>
+          </div>
+        </div>
+        <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+          <div class="item-wrapper">
+            <div class="title mb-2 mb-md-3">
+              <span class="num mbr-fonts-style display-1">
+                <strong>50+</strong></span>
+            </div>
+            <h4 class="card-title mbr-fonts-style display-5">
+              <strong>Destinations Explored</strong>
+            </h4>
+          </div>
+        </div>
+        <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+          <div class="item-wrapper">
+            <div class="title mb-2 mb-md-3">
+              <span class="num mbr-fonts-style display-1">
+                <strong>100%</strong></span>
+            </div>
+            <h4 class="card-title mbr-fonts-style display-5">
+              <strong>Satisfaction Guaranteed</strong>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5th Section Epic Adventures -->
+  <section data-bs-version="5.1" class="features03 cid-ukF9jwtZtj" id="events-1-ukF9jwtZtj">
+    <div class="container-fluid part5">
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 content-head">
+          <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+              <strong>Epic Adventures</strong>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item features-image col-12 col-md-6 col-lg-3 active">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="images/91JuTaUSKaMh2yjB1C4A_IMG_9284.jpeg" alt="wait will open" title="" />
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mt-0 mb-2 ndisplay-1">
+                <strong>Tropical Paradise Getaway</strong>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mb-3 ndisplay-2">
+                2024-09-15
+              </p>
+              <p class="mbr-text mbr-fonts-style mb-3 ndisplay-3">
+                Escape to sun-soaked beaches and crystal-clear waters. Your
+                dream vacation awaits!
+              </p>
+              <div class="mbr-section-btn item-footer">
+                <a href="https://www.instagram.com/beachesresorts?igsh=MWJpN2NkYXUxZ3R0YQ==" class="btn item-btn btn-primary display-7">Join</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="images/photo-1480057261736-36852db40e50.jpeg" alt="Safarr" title=""
+                data-slide-to="1" data-bs-slide-to="1" />
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mb-2 mt-0 ndisplay-1">
+                <strong>Mountaines Hiking Expedition</strong>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mb-3 ndisplay-2">
+                2024-09-10
+              </p>
+              <p class="mbr-text mbr-fonts-style mb-3 ndisplay-3">
+                Conquer breathtaking peaks and embrace nature's beauty. Are
+                you ready for the challenge?
+              </p>
+              <div class="mbr-section-btn item-footer">
+                <a href="https://www.instagram.com/treksandtrails?igsh=MWlxZW84MmR0M3pmbA==" class="btn item-btn btn-primary display-7">Join</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="images/photo-1682686578023-dc680e7a3aeb.jpeg" alt="Safarr" title=""
+                data-slide-to="2" data-bs-slide-to="2" />
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mb-2 mt-0 ndisplay-1">
+                <strong>Cultural Festival Extravaganza</strong>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mb-3 ndisplay-2">
+                2024-10-05
+              </p>
+              <p class="mbr-text mbr-fonts-style mb-3 ndisplay-3">
+                Immerse yourself in vibrant traditions and mouth-watering
+                cuisines. World like never before!
+              </p>
+              <div class="mbr-section-btn item-footer">
+                <a href="https://www.instagram.com/indian_spirit_festival?igsh=MXFvZGZlNWl5MTN0NQ==" class="btn item-btn btn-primary display-7">Join</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="images/photo-1683009427666-340595e57e43.jpeg" alt="Loading..." title=""
+                data-slide-to="2" data-bs-slide-to="2" />
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mb-2 mt-0 ndisplay-1">
+                <strong>Winter Wonderland Retreat</strong>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mb-3 ndisplay-2">
+                2024-12-20
+              </p>
+              <p class="mbr-text mbr-fonts-style mb-3 ndisplay-3">
+                Embrace the magic of snow-covered landscapes and cozy fireside
+                chats. Winter awaits!
+              </p>
+              <div class="mbr-section-btn item-footer equal-space">
+                <a href="https://www.instagram.com/oceandotcom?igsh=em53anpna2poZzRw" class="btn item-btn btn-primary display-7">Join</a>
+                <a href="./explore.html" class="btn btn-secondary ndisplay-4"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="align-center">
+    <a href="./explore.html" class=" btn item-btn btn-primary display-7 btn"> Explore..</a>
+  </div> -->
+  </section>
+  
+  <!-- Image Slider by the Scroll -->
+  <section data-bs-version="5.1" class="gallery07 cid-ukF9jwuzGM" id="gallery-14-ukF9jwuzGM">
+    <div class="container-fluid gallery-wrapper">
+      <div class="row justify-content-center">
+        <div class="col-12 content-head"></div>
+      </div>
+      <div class="grid-container">
+        <div class="grid-container-3 moving-left" style="transform: translate3d(-200px, 0px, 0px)">
+          <div class="grid-item">
+            <img src="images/photo-1473163928189-364b2c4e1135.jpeg" alt="Safarr" />
+          </div>
+          <div class="grid-item">
+            <img src="images/photo-1590053404184-ce4ee04f3d58.jpeg" alt="Safarr" />
+          </div>
+          <div class="grid-item">
+            <img src="images/photo-1682687982360-3fbab65f9d50.jpeg" alt="Safarr" />
+          </div>
+          <div class="grid-item">
+            <img src="images/photo-1468078809804-4c7b3e60a478.jpeg" alt="Safarr" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section Not Needed -->
+  <!-- <section data-bs-version="5.1" class="header18 cid-ukF9jwuZ72 mbr-fullscreen"
+    data-bg-video="https://www.youtube.com/watch?v=nOmx4ePpuRM&list=TLGGKmNqoWU71IcyNDA4MjAyNA&t=19s autoplay=1&amp;loop=1&amp;playlist=nOmx4ePpuRM&amp;t=20&amp;mute=0&amp;playsinline=1 & controls=0 &showinfo=0 & autohide=1 & allowfullscreen=true & mode=transparent"
+    id="video-5-ukF9jwuZ72">
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0)"></div>
+    <div class="container-fluid">
+      <div class="row"></div>
+    </div>
+  </section> -->
+
+  <!-- 6th Section  -->
+  <section data-bs-version="5.1" class="list05 cid-ukF9jwvS6d" id="faq-3-ukF9jwvS6d">
+    <div class="container">
+      <div class="col-12 mb-5 content-head">
+        <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+          <strong>Curious Minds Unite!</strong>
+        </h3>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="item features-without-image col-12 active">
+            <div class="item-wrapper">
+              <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 ndisplay-1">
+                <strong>What is the best travel destination?</strong>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mt-0 mb-3 ndisplay-2">
+                It depends on your vibe! Beach, mountains, or city?
+              </p>
+            </div>
+          </div>
+          <div class="item features-without-image col-12">
+            <div class="item-wrapper">
+              <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 ndisplay-1">
+                <strong>How do I pack efficiently?</strong>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mt-0 mb-3 ndisplay-2">
+                Roll your clothes, don’t fold! Less wrinkles, more space!
+              </p>
+            </div>
+          </div>
+          <div class="item features-without-image col-12">
+            <div class="item-wrapper">
+              <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 ndisplay-1">
+                <strong>Can I travel solo and have fun?</strong>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mt-0 mb-3 ndisplay-2">
+                Absolutely! Solo travel is the ultimate freedom!
+              </p>
+            </div>
+          </div>
+          <div class="item features-without-image col-12">
+            <div class="item-wrapper">
+              <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 ndisplay-1">
+                <strong>What if I get lost?</strong>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mt-0 mb-3 ndisplay-2">
+                Embrace the adventure! Getting lost is part of the fun!
+              </p>
+            </div>
+          </div>
+          <div class="item features-without-image col-12">
+            <div class="item-wrapper">
+              <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 ndisplay-1">
+                <strong>How do I find cheap flights?</strong>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mt-0 mb-3 ndisplay-2">
+                Use flight comparison sites and be flexible!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7th Section -->
+  <section data-bs-version="5.1" class="clients04 cid-ukF9jwvQMi" id="partners-1-ukF9jwvQMi">
+    <div class="container-fluid">
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 content-head">
+          <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+              <strong>Our Awesome Partners</strong>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2 active">
+          <div class="item-wrapper">
+            <div class="">
+              <img src="images/photo-1651044450619-5ce74d316987.jpeg" alt="Safarr" title=""
+                data-slide-to="1" data-bs-slide-to="1" />
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+          <div class="item-wrapper">
+            <div class="">
+              <img src="images/photo-1606136968306-ab2868cc1f21.jpeg" alt="Safarr" title=""
+                data-slide-to="2" data-bs-slide-to="2" />
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+          <div class="item-wrapper">
+            <div class="">
+              <img src="images/photo-1502828331539-51c709e80300.jpeg" alt="Safarr" title=""
+                data-slide-to="3" data-bs-slide-to="3" />
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+          <div class="item-wrapper">
+            <div class="">
+              <img src="images/photo-1617727553252-65863c156eb0.jpeg" alt="Safarr" title=""
+                data-slide-to="4" data-bs-slide-to="4" />
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+          <div class="item-wrapper">
+            <div class="">
+              <img src="images/photo-1596622723231-b20320c7346b.jpeg" alt="Safarr" title=""
+                data-slide-to="5" data-bs-slide-to="5" />
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+          <div class="item-wrapper">
+            <div class="">
+              <img src="images/photo-1651853082689-706323a31427.jpeg" alt="Safarr" title=""
+                data-slide-to="6" data-bs-slide-to="6" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9th Section which is of loop text  -->
+  <section data-bs-version="5.1" class="gallery10 cid-ukF9jwwf92" id="features-69-ukF9jwwf92">
+    <div class="container-fluid">
+      <div class="loop-container">
+        <div class="item display-1"
+          data-linewords="Plan trips like a pro, effortlessly! * Discover hidden gems and local secrets! * "
+          data-direction="-1" data-speed="0.05">
+          ☁️
+        </div>
+
+        <div class="item display-1"
+          data-linewords="Plan trips like a pro, effortlessly! * Discover hidden gems and local secrets! * "
+          data-direction="-1" data-speed="0.05">
+          ☁️
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fixed Image Section -->
+  <section data-bs-version="5.1" class="image02 cid-ukF9jwwH88 mbr-fullscreen mbr-parallax-background"
+    id="image-13-ukF9jwwH88">
+    <div class="container">
+      <div class="row"></div>
+    </div>
+  </section>
+
+  <!-- 10th Section with fixed image and text over it -->
+  <section data-bs-version="5.1" class="header14 cid-ukF9jwwtTq mbr-parallax-background"
+    id="call-to-action-1-ukF9jwwtTq">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="card col-12 col-md-12 col-lg-8">
+          <div class="card-wrapper">
+            <div class="card-box align-center">
+              <h1 class="card-title mbr-fonts-style mb-4 display-1">
+                <strong>Unleash Your Inner Explorer!</strong>
+              </h1>
+
+              <div class="mbr-section-btn mt-4">
+                <a class="btn btn-primary display-7" href="#top-content">Get Started Now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11th Section : Social Media Handles -->
+  <section data-bs-version="5.1" class="social05 cid-ukF9jwwJiv" id="follow-us-2-ukF9jwwJiv">
+    <div class="container">
+      <div class="row">
+        <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2">
+          <strong>Join Our Travel Tribe!</strong>
+        </h3>
+        <div class="col-12">
+          <div class="social-row">
+            <div class="soc-item">
+              <a href="mailto:safarr.cu@gmail.com" target="_blank">
+                <span class="mbr-iconfont socicon socicon-google"></span>
+              </a>
+            </div>
+            <!-- <div class="soc-item">
+              <a href="mailto:safarr.cu@gmail.com" target="_blank">
+                <span class="mbr-iconfont socicon-twitter socicon"></span>
+              </a>
+            </div> -->
+            <div class="soc-item">
+              <a href="https://www.instagram.com/safarr.cu/?hl=en" target="_blank">
+                <span class="mbr-iconfont socicon-instagram socicon"></span>
+              </a>
+            </div>
+            <!-- <div class="soc-item">
+              <a href="mailto:safarr.cu@gmail.com" target="_blank">
+                <span class="mbr-iconfont socicon socicon-linkedin"></span>
+              </a>
+            </div>
+            <div class="soc-item">
+              <a href="mailto:safarr.cu@gmail.com" target="_blank">
+                <span class="mbr-iconfont socicon socicon-twitch"></span>
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 footer-about wow fadeInUp">
+            <img
+              class="logo-footer"
+              src="https://i.ibb.co/Fs5zW27/yoga-1805784-960-720.webp"
+              alt="logo-footer"
+              data-at2x="assets/img/logo.png"
+            />
+            <p style="line-height: normal;">
+              SAFARR is your ultimate travel companion, offering seamless journey planning, and unforgettable exploration experiences worldwide.
+            </p>
+            <p><a href="./our_team.html">Our Team</a></p>
+          </div>
+          <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
+            <h3>Contact</h3>
+            <span class="animate-border border-black space1"></span>
+            <p>
+              <i class="fas fa-map-marker-alt"></i>Christ University, Delhi
+              NCR
+            </p>
+            <p><i class="fas fa-phone"></i>Phone: +91 9876543210</p>
+            <p>
+              <i class="fas fa-envelope"></i>Email:
+              <a href="mailto:safarr.cu@gmail.com">safarr.cu@gmail.com</a>
+            </p>
+          </div>
+          <div class="col-md-4 footer-links wow fadeInUp">
+            <div class="row">
+              <div class="col">
+                <h3>Links</h3>
+              </div>
+            </div>
+            <span class="animate-border border-black space1"></span>
+            <div class="row">
+              <div class="col-md-6">
+                <p><a class="scroll-link" target="_blank" href="./index.html">Home</a></p>
+                <p><a target="_blank" href="./plan.html">Plans</a></p>
+                <p><a target="_blank" href="./explore.html">Explore</a></p>
+              </div>
+              <div class="col-md-6">
+                <p><a target="_blank" href="./Culture.html">Culture</a></p>
+                <p><a target="_blank" href="./budget.html">Budget</a></p>
+                <p><a target="_blank" href="./tearm&condition.html">Terms</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 footer-copyright">
+            &copy; 2024 Made By Christite <a href="#">Christite</a>
+          </div>
+          <div class="col-md-6 footer-social">
+            <a target="_blank" href="mailto:safarr.cu@gmail.com"><i class="uil uil-google"></i></a>
+            <a target="_blank" href="https://www.instagram.com/safarr.cu/?hl=en"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- javascript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jarallax.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/navbar-dropdown.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/scroll-gallery.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/formoid.min.js"></script>
+  <script src="js/login.js"></script>
+
+  <!-- chat bot -->
+  <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/15c2d1e3-3ccf-4f85-ace7-84cbf052d6ee/webchat/v2.1/config.js"></script>
+  <!-- <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/a3979cae-aee0-4423-a0ac-f5ee6d8b7c58/webchat/v2.1/config.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+</body>
+</html>

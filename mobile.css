@@ -1,7 +1,7 @@
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>1550px */
 
 @media (max-width: 1550px) {
-  .bar ul li {
+  .bar h1 {
     font-size: 60px;
   }
 }
@@ -14,7 +14,7 @@
     padding: 20px 0;
   }
 
-  .bar ul li {
+  .bar h1 {
     font-size: 50px;
   }
 
@@ -26,7 +26,7 @@
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>1225px */
 
 
-@media only screen and (max-width: 1225px) {
+@media screen and (max-width: 1225px) {
   .section_first div {
     width: 600px;
   }
@@ -51,7 +51,7 @@
     padding: 15px 0;
   }
 
-  .bar ul li {
+  .bar h1 {
     font-size: 40px;
   }
 
@@ -87,7 +87,7 @@
 
 @media (max-width: 998px) {
   .section_first div {
-    width: 500px;
+    width: 520px  !important;
   }
 
   .container p {
@@ -117,7 +117,8 @@
     padding: 0px 0;
   }
 
-  .bar ul li {
+  .bar h1 {
+    padding: 10px 0px !important;
     font-size: 25px;
   }
 
@@ -149,7 +150,7 @@
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>880px */
 
 
-@media only screen and (max-width: 880px) {
+@media screen and (max-width: 880px) {
   html {
     width: 105vw;
   }
@@ -165,12 +166,12 @@
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>830px */
 
 
-@media only screen and (max-width: 830px) {
+@media screen and (max-width: 830px) {
   .section_first {
-    width: 105vw;
+    width: 105vw !important;
   }
   .section_first div {
-    width: 500px;
+    width: 500px !important;
   }
 
   .container p {
@@ -199,7 +200,7 @@
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>782px */
 
 
-@media only screen and (max-width: 782px) {
+@media screen and (max-width: 782px) {
   .item_two h1 {
     font-size: 4rem;
     line-height: normal;
@@ -240,12 +241,21 @@
   .contact_form form {
     width: 650px !important;
   }
+
+  .bio{
+    width: 660px !important;
+  }
+
+  #bio{
+    font-size: 45px !important;
+  }
+
 }
 
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>732px */
 
 
-@media only screen and (max-width: 732px) {
+@media screen and (max-width: 732px) {
   html {
     width: 120vw;
   }
@@ -272,7 +282,7 @@
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>660px */
 
 
-@media only screen and (max-width: 660px) {
+@media screen and (max-width: 660px) {
   html {
     width: 189vw;
   }
@@ -308,8 +318,9 @@
     width: 188vw !important;
   }
 
-  .bar ul li {
-    font-size: 18px;
+  .bar h1 {
+    padding: 12px 0px !important;
+    font-size: 22px;
   }
 
   .item_two h1 {
@@ -340,7 +351,7 @@
   }
 
   .bio {
-    width: 500px !important;
+    width: 410px !important;
   }
   #bio {
     font-size: 35px !important;
@@ -368,38 +379,43 @@
   }
 
   .contact_form form {
-    width: 500px !important;
+    width: 400px !important;
   }
 
   .connect div h6 {
     width: 556px !important;
+  }
+
+  .btn,
+  .btn2 {
+    padding: 17px 90px !important;
   }
 }
 
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>590px */
 
 
-@media only screen and (max-width: 590px) {
+@media screen and (max-width: 590px) {
   .section_first {
     width: 100vw;
     height: 70vh;
   }
 
   .section_first div {
-    width: 350px;
-    margin: 0 40px;
+    width: 380px !important;
+    margin: 0 auto !important;
   }
 
   .container p {
-    font-size: 12px;
+    font-size: 10px !important;
   }
 
   .container h1 {
-    font-size: 23px;
+    font-size: 25px !important;
   }
 
   .container h3 {
-    font-size: 18px;
+    font-size: 13px !important;
   }
 
   .resume{
@@ -411,12 +427,30 @@
   height: 50px !important;
   width: 102.5vw !important;
 }
+
+.btn,
+  .btn2 {
+    margin: 30px 5px !important;
+    font-size: 20px !important;
+    padding: 17px 80px !important;
+    background-position: 0 25% !important;
+  }
+
+  .bottom_resume{
+    padding: 10px 30px !important;
+    font-size: 16px !important;
+  }
+
+  .section_five{
+    margin-bottom: -80px !important;
+  }
+
 }
 
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>550px */
 
 
-@media only screen and (max-width: 550px) {
+@media screen and (max-width: 550px) {
     
   .sub_section_bar .bar2{
     height: 50px !important;
@@ -449,41 +483,89 @@
      height: 990px !important;
      margin-bottom: -11px !important;
    }
+
+   .section_three {
+    margin-bottom: -50px !important;
+  }
+
+   .bio{
+    width: 350px !important;
+   }
+   #bio {
+    margin: 1px auto !important;
+    font-size: 25px !important;
+  }
  
    .code_line div {
      font-size: 13px !important;
      line-height: 23.3px;
    }
+
+   .contact_form form {
+    width: 350px !important;
+  }
+
+  .connect div h1{
+    font-size: 70px !important;
+  }
+
+  .connect div h6 {
+    width: 356px !important;
+    font-size: 18.5px !important;
+    line-height: 26px !important;
+  }
+
+  .btn,
+  .btn2 {
+    margin: 30px 5px !important;
+    font-size: 18px !important;
+    padding: 17px 65px !important;
+    background-position: 0 25% !important;
+  }
+
+  .bottom_resume{
+    padding: 10px 30px !important;
+    font-size: 16px !important;
+  }
+
+  .section_five{
+    margin-bottom: -80px !important;
+  }
+
+  .foot_one{
+    font-size: 11px !important;
+  }
+
  }
 
  /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>420px */
 
 
-@media only screen and (max-width: 420px) {
+@media screen and (max-width: 420px) {
   .section_first {
     width: 100vw;
     height: 60vh;
   }
 
   .section_first div {
-    width: 300px;
-    margin: 0 50px;
+    width: 300px !important;
+    margin: 0px 50px !important;
   }
 
   .container p {
-    font-size: 10px;
+    font-size: 10px !important;
   }
 
   .container h1 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .container h3 {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
   .sub_section_bar .bar2{
-    height: 50px !important;
+    height: 30px !important;
     width: 104.2vw !important;
   }
 
@@ -497,6 +579,11 @@
     display: flex;
     flex-direction: column;
     max-height: 700px !important;
+  }
+
+  .bar h1 {
+    padding: 11px 0px !important;
+    font-size: 18px;
   }
 
   .box1 {
@@ -585,27 +672,25 @@
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>350px */
 
 
-@media only screen and (max-width: 350px) {
+@media screen and (max-width: 350px) {
   .section_first {
-    width: 100vw;
-    height: 10vh;
+    width: 100vw !important;
   }
 
   .section_first div {
-    width: 250px;
-    margin: 0 20px;
-  }
+    width: auto;
+    margin: 0 auto !important;  }
 
   .container p {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .container h1 {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .container h3 {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .sub_section_bar .bar2{

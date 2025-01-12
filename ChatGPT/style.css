@@ -16,14 +16,14 @@ html , body{
 
 .left {
   width: 260px;
-  height: 100%;
+  min-height: 100vh;
   background-color: rgb(32, 33, 35);
   color: aliceblue;
 }
 
 .right {
   width: 1800px;
-  height: 100%;
+  min-height: 100vh;
   background-color: rgb(52, 53, 65);
   color: rgb(19, 21, 22);
 }

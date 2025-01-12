@@ -1,0 +1,96 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    background: #1d1d1d;
+    user-select: none;
+}
+
+.new{
+    position: fixed;
+    width: 100%;
+    background: #01FFF4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    clip-path: circle(22vh at var(--x) var(--y) );
+}
+
+.new h2{
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke:4px #1d1d1d;
+    font-size: 20vw;
+    pointer-events: none;
+    font-weight: bolder;
+}
+
+.old{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.old h2{
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+    font-size: 20vw;
+    -webkit-text-stroke:4px #01FFF4;
+    font-weight: bolder;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff28;
+    color: antiquewhite;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+@media (max-width:1200px) {
+    .new{
+        clip-path: circle(15vh at var(--x) var(--y)) !important;
+    }
+}
+
+@media (max-width:900px) {
+    .new{
+        clip-path: circle(12vh at var(--x) var(--y)) !important;
+    }
+}
+
+@media (max-width:680px) {
+    .new{
+        clip-path: circle(8vh at var(--x) var(--y)) !important;
+    }
+}
+
+@media (max-width:550px) {
+    .new{
+        clip-path: circle(7vh at var(--x) var(--y)) !important;
+    }
+    .footer{ 
+    /* width: 60%; */
+    font-size: 8px;
+    bottom:7%;
+    }
+}
+
+@media (max-width:440px) {
+    .new{
+        clip-path: circle(5vh at var(--x) var(--y)) !important;
+    }
+}

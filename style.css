@@ -73,7 +73,7 @@ html , body{
 }
 
 .section_first{
-    background-image:url(./img/bg-2.webp);
+    background-image:url(./img/bg-2.jpg);
     background-size: cover;
     height: 90vh;
     background-position: center;
@@ -84,8 +84,8 @@ html , body{
 .container{
     font-family: five;
     width: 820px;
-    margin: 0 auto;
-    padding-top: 300px;
+    margin: 0 auto !important;
+    padding-top: 300px !important;
 }
 
 .container p{
@@ -131,13 +131,40 @@ html , body{
 }
 
 .bar{
-    background-color :var(--red);
-    box-sizing: border-box;
     display: flex;
-    padding:24px 0;
+    height: 25%;
+    background-color :var(--red);
     transform: matrix(0.99863, -0.052336, 0.052336, 0.99863, 0, 0);
-    width :99.2vw;
+    width :100%;
     z-index: 2;
+    /* white-space: nowrap; */
+}
+
+.white_space{
+    white-space: nowrap;
+}
+
+.li{
+    text-transform: uppercase;
+    color :#ffccde;
+    font-family :five;
+    font-size :64px;
+    font-weight: 500;
+    letter-spacing: 0.50px;
+    cursor: default;
+    animation-name: loop;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loop {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }
 
 .bar2{
@@ -146,30 +173,12 @@ html , body{
     padding: 0 !important;
     height: 98px;
     overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: hidden;
     left: -20px;
     right: 0px;
     position: absolute;
     top: calc(92% - 10px / 2);
     transform: rotate(7deg);
     z-index: 0;
-}
-
-.bar ul{
-    display: flex;
-    justify-content: space-between;
-}
-
-.li{
-    color :#ffccde;
-    font-family :five;
-    font-size :64px;
-    font-weight: 400;
-    letter-spacing: 0.64px;
-    line-height: 50px;
-    list-style-type: square;
-    cursor: default;
 }
 
 .section_two{
@@ -366,12 +375,12 @@ hr{
 
 .box1 h1{
     font-family: one;
-    margin: 0 0 20px 15px;
+    margin: 10px 15px;
     text-align: center;
     color:#ffccde ;
     font-size: 30px;
     font-weight: 700;
-    line-height: 46px;
+    line-height: 40px;
     box-sizing: border-box;
 }
 
@@ -628,7 +637,7 @@ width :1380px;
 }
 
 .btn {
-    margin: 30px 30px;
+    margin: 30px 15px 30px 30px;
     background: linear-gradient(-45deg,#ffa63d,#ff3d77,#1593e3,#5918df);
     background-size: 100%;
     border: none;
@@ -644,14 +653,16 @@ width :1380px;
     background-position: 0 50%;
     bottom: 0;
     cursor: pointer;
+    transition-duration: 1.5s;
 }
 
 .btn:hover{
     background: linear-gradient(-45deg,#5918df,#1593e3,#ff3d77,#ffa63d);
+    transition: all 1.5s ease-in-out;
 }
 
 .btn2{
-    margin: 30px 0;
+    margin: 30px 30px 30px 15px;
     background: transparent;
     border: 1px solid white;
     border-radius: 50px;
@@ -670,6 +681,7 @@ width :1380px;
 .btn2:hover{
     color: #1c1c1c;
     background-color: white;
+    transition: all .5s ease-in-out;
 }
 
 .connect{
@@ -770,6 +782,10 @@ footer{
     font-family: seven;
 }
 
+.bottom_resume{
+    margin: 2px !important;
+}
+
 .icon_float{
     backdrop-filter: blur(15px);
     background: rgba(65, 64, 64, 0.3);
@@ -825,6 +841,9 @@ footer{
 
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>    All the Colors */
 
+.bg_red{
+    color:#ee7050;
+}
 
 .grey{
     color: rgb(204, 203, 203);

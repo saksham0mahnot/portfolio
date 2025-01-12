@@ -187,6 +187,7 @@ h1 {
 .images-section {
     padding-top: 44px;
     display: flex;
+    width: 1200px;
 }
 
 .image-collage {

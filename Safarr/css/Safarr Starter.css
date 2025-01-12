@@ -1,0 +1,136 @@
+/* Base Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d6f9ec73; /* Neutral color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    text-align: center; /* Center the text */
+}
+
+/* Header Styling */
+header {
+    background-color: #90be6d; /* Light neutral color */
+    color: white; /* Darker neutral color */
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Day and Activity Sections */
+.day {
+    padding: 20px;
+    margin: 20px auto; /* Auto margin to center the sections */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Center content within a fixed width */
+    text-align: center;
+}
+
+h1{
+    margin-top: 100px !important;
+}
+
+h2 {
+    color: #4a4a4a; /* Darker neutral color */
+    margin-bottom: 10px;
+}
+
+.activity {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 0; /* Remove indentation */
+    list-style: none; /* Remove bullet points */
+}
+
+li {
+    /* margin-bottom: 10px; */
+    font-size: 1.1em;
+}
+
+/* Button Styling */
+button {
+    background-color: #4a4a4a; /* Darker neutral color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Footer Styling */
+
+/* Attractive Glow Button */
+.glow-button {
+    font-size: 18px;
+    color: white;
+    padding: 15px 30px;
+    background-color: #abce90;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.glow-button:hover {
+    background-color: #357ab8;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Button ripple effect */
+.glow-button::before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.glow-button:active::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Glowing animation */
+.glow-button::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.6);
+    animation: glowing 1.5s infinite;
+    z-index: -1;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 5px rgba(74, 144, 226, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(74, 144, 226, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(74, 144, 226, 0.2);
+    }
+}
