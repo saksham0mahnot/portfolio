@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background-color: #464646; */
+    /* cursor: none; */
+}
+
+body.dark-mode{
+    --search-bar-text:rgb(0, 0, 0);
+    --search-bar:#f1f1f157;
+    --index-text:rgb(0, 0, 0);
+    --index-background:#4646460e;
+    --index-item-text:rgb(41, 41, 41);
+}
+
+body.light-mode{
+    --search-bar-text:#fff;
+    --search-bar:#ffffff0c;
+    --index-text:aliceblue;
+    --index-background:#4646460C;
+    --index-item-text:beige;
+    --imd-text:#464646;
+}
+
+#bp{
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    backdrop-filter: blur(25px) brightness(70%) contrast(90%);
+}
+
+/* checkbox-menu */
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-menu{
+    position: absolute;
+    bottom: 10%;
+    margin: 30px;
+    cursor: none; 
+}
+
+#bwcheckbox{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background: #3f3f3f;
+    box-shadow: 0 0 0 4px #222;
+    border-radius: 75px;
+    /* cursor: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none ;
+}
+
+#checkbox{
+    appearance: none;
+}
+
+#whiteTheme{
+    position: absolute;
+    left: -10px;
+    width: 115px;
+    height: 100px;
+    background:url(./img/Coffee_01.png);
+    background-size: auto 100px;
+    z-index: 1000;
+    transition: 1.5s;
+    transform: rotate(180deg);
+    transform-origin: 55px;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+
+
+    --search-bar-text:#fff;
+    --search-bar:#ffffff0c;
+    --index-text:aliceblue;
+    --index-background:#4646460C;
+    --index-item-text:beige;
+    --imd-text:#464646;
+}
+
+#checkbox:checked ~ #whiteTheme{
+    left: 100px;
+    transform: rotate(720deg);
+    background:url(./img/Coffee_02.png);
+    background-size: auto 100px;
+}
+
+#blackTheme{
+    position: absolute;
+    inset: 0;
+    background: rgb(255, 255, 255);
+    border-radius: 75px;
+    transition: 0.5s;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.75);
+    opacity: 0.75;
+}
+
+#checkbox:checked ~ #blackTheme{
+    background: #4b3222; 
+    transition: 1.5s;
+}
+
+/* container */
+.container{
+    display: flex;
+}
+
+.searchDiv{
+    width: 800px;
+    display: flex;
+    margin: 26px auto;
+}
+#movieName{
+    width: 70%;
+    font-size: 20px;
+    color: var(--search-bar-text);
+    padding: 15px 30px;
+    background-color: var(--search-bar);
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#movieName:focus{
+    outline: none;
+}
+
+#searchBtn{
+    cursor: pointer;
+    width: 30%;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    background-color: red;
+    border: none;
+    transition: .5s;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#searchBtn:focus{
+    background-color: rgb(255, 94, 0);
+    font-size: 24px;
+}
+
+.d-none{
+    display: none !important;
+}
+
+.detail-container{
+    width: 800px;
+    margin: 26px auto;
+    border-radius: 10px;
+    display: flex;
+    color: var(--index-text);
+    font-size: 23px;
+    justify-content: space-between;
+    background-color: var(--index-background);
+    padding: 10px;
+}
+
+.poster{
+    position: relative;
+    padding-left: 10px;
+}
+
+.text-large{
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.text{
+    font-size: 18px;
+    color: var(--index-item-text);
+}
+
+#posterText{
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+    background-color: rgb(208, 255, 1);
+    color: #464646;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid brown;
+}
+
+#imdbRating{
+    background-color: rgb(208, 255, 1);
+    color: #464646;
+}
+
+/* Spinner */
+
+.loader-conatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+}
+
+.custom-loader {
+  width: 150px;
+  height: 150px;
+  display: grid;
+  animation: s4 4s infinite;
+}
+.custom-loader::before,
+.custom-loader::after {    
+  content:"";
+  grid-area: 1/1;
+  border:18px solid;
+  border-radius: 50%;
+  border-color:#f46d6d #f46d6d #0000 #0000;
+  mix-blend-mode: darken;
+  animation: s4 1s infinite linear;
+}
+.custom-loader::after {
+  border-color:#0000 #0000 #E4E4ED #E4E4ED;
+  animation-direction: reverse;
+}
+
+@keyframes s4{ 
+  100%{transform: rotate(1turn)}
+}
