@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie Application</title>
+  </head>
+  <body id="bp" background="./img/grey.jpg">
+    <div class="menu">
+      <div class="checkbox-menu">
+        <label id="bwcheckbox">
+          <input id="checkbox" type="checkbox" />
+          <span id="whiteTheme"></span>
+          <b id="blackTheme"></b>
+        </label>
+      </div>
+  
+    </div>
+    
+    <div class="container">
+      <div class="searchDiv">
+        <input type="text" placeholder="Search for a movie..." id="movieName" />
+        <button id="searchBtn" onclick="searchMovie()">Search for Movie</button>
+      </div>
+    </div>
+
+    <div class="loader-conatiner" id="loader">
+      <div class="custom-loader"></div>
+    </div>
+
+    <div class="detail-container" id="detail-container">
+      <div class="details">
+        <h2 class="text-large" id="title">RRR</h2>
+        <p>Director: <span class="text" id="director"></span></p>
+        <p>Actors: <span class="text" id="actors"></span></p>
+        <p>Awards: <span class="text" id="awards"></span></p>
+        <p>Country: <span class="text" id="country"></span></p>
+        <p>Genre: <span class="text" id="genre"></span></p>
+        <p>Plot: <span class="text" id="plot"></span></p>
+        <p>Released: <span class="text" id="released"></span></p>
+        <p>Writer: <span class="text" id="writer"></span></p>
+      </div>
+      <div class="poster">
+        <p id="posterText">IMDb:<span id="imdbRating">7.8</span></p>
+        <img id="posterImg" src="" alt="Movie Poster" />
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- <p>Box Office: <span id="boxOffice">$15,156,051</span></p> -->
