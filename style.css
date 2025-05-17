@@ -356,7 +356,7 @@ hr{
 .grid{
     color: #988e9f;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
