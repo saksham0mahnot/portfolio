@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantPal - Modern Mobile App Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #E0E0E0; /* Light gray text */
+        }
+        .text-accent-green {
+            color: #81C784; /* Soft, light green for accents */
+        }
+        .bg-dark-neutral {
+            background-color: #1E1E1E; /* Dark gray for cards/sections */
+        }
+        .header-bg {
+            background-color: #0F4C5C; /* Deep teal/slate for header */
+            background-image: linear-gradient(135deg, #1A4D2E 0%, #004D40 100%); /* Deep forest green to dark teal */
+        }
+        .shadow-dark-lift {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+        }
+        .mockup-frame {
+            border: 8px solid #333;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Hero Section -->
+    <header class="header-bg text-white py-20 sm:py-32">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-6xl sm:text-7xl font-extrabold mb-4 tracking-tight">
+                PlantPal Mobile Application 
+            </h1>
+            <p class="text-xl sm:text-2xl font-light max-w-4xl mx-auto mb-10 text-gray-300">
+                Finding peace between nature? We've got you covered. Enhance your knowledge, schedule plant care reminders, and monitor growth all in one place.
+                <br> <br>
+                Android users, feel free to download until it hits the Play Store and <br> iOS users... you can, uh, watch the trailer again.
+            </p>
+            
+            <!-- Download Button -->
+            <a href="./app-debug.apk" class="inline-block px-12 py-5 text-xl font-bold text-gray-900 bg-accent-green rounded-xl shadow-lg transition duration-300 transform hover:scale-105 hover:bg-green-400 focus:outline-none focus:ring-4 focus:ring-green-300">
+                Download Now (Android App)
+            </a>
+        </div>
+    </header>
+
+    <!-- App Overview and Features Section -->
+    <section id="overview" class="py-20 sm:py-24 bg-dark-neutral">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-accent-green">A Seamless Companion for Every Plant Lover</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <!-- Feature 1: Identification -->
+                <div class="p-6 rounded-xl border border-gray-700 hover:border-accent-green transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-accent-green mx-auto mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM3 10a7 7 0 1114 0 7 7 0 01-14 0z" />
+                        <path fill-rule="evenodd" d="M10 13a1 1 0 100-2 1 1 0 000 2zm1-7a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-2">Instant ID</h3>
+                    <p class="text-gray-400">Identify species using AI and the PlantNet API with just a single picture.</p>
+                </div>
+                
+                <!-- Feature 2: Reminders -->
+                <div class="p-6 rounded-xl border border-gray-700 hover:border-accent-green transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-accent-green mx-auto mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2 2a1 1 0 001.414-1.414L11 11.586V6z" clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-2">Smart Care</h3>
+                    <p class="text-gray-400">Get proper watering and nourishing schedules so you can care for your plants even when busy.</p>
+                </div>
+
+                <!-- Feature 3: Monitoring -->
+                <div class="p-6 rounded-xl border border-gray-700 hover:border-accent-green transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-accent-green mx-auto mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l1.293 1.293a1 1 0 001.414 0L12.414 15H15a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2zm7 3a1 1 0 011 1v3a1 1 0 11-2 0V7a1 1 0 011-1z" clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-2">Growth Monitor</h3>
+                    <p class="text-gray-400">Closely monitors the plant's health and behavior to help you detect any unusual patterns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 Step Showcase Section -->
+    <section id="showcase" class="py-20 sm:py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-accent-green">The Simple 5-Step PlantPal Experience</h2>
+            
+            <div class="grid grid-cols-1 gap-16">
+                
+                <!-- STEP 1: Opening the App -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-dark-neutral p-8 rounded-2xl shadow-dark-lift">
+                    <div class="md:order-1 order-2 space-y-4">
+                        <span class="text-xl font-bold text-accent-green">STEP ONE</span>
+                        <h3 class="text-3xl font-bold">Launch & Welcome</h3>
+                        <p class="text-lg text-gray-400">
+                            Open our app and be greeted with a soothing UI designed for nature lovers. The home screen offers 2 basic options to get started: Identify a Plant or View Saved Plants.
+                        </p>
+                    </div>
+                    <div class="md:order-2 order-1 flex justify-center">
+                        <img src="img/step1.png" alt="App Welcome Screen Screenshot" class="w-full max-w-sm rounded-[2rem] mockup-frame object-cover">
+                    </div>
+                </div>
+
+                <!-- STEP 2: Taking the Photo -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-dark-neutral p-8 rounded-2xl shadow-dark-lift">
+                    <div class="md:order-2 order-2 space-y-4">
+                        <span class="text-xl font-bold text-accent-green">STEP TWO</span>
+                        <h3 class="text-3xl font-bold">Dashboard</h3>
+                        <p class="text-lg text-gray-400">
+                            Use your phone's camera to take a photo of your plant, or seamlessly import an image from your gallery. Our system is optimized for high-quality input.
+
+                        </p>
+                    </div>
+                    <div class="md:order-1 order-1 flex justify-center">
+                        <img src="img/step2.png" alt="App Camera Capture Screen Screenshot" class="w-full max-w-sm rounded-[2rem] mockup-frame object-cover">
+                    </div>
+                </div>
+
+                <!-- STEP 3: Analyze Plant -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-dark-neutral p-8 rounded-2xl shadow-dark-lift">
+                    <div class="md:order-1 order-2 space-y-4">
+                        <span class="text-xl font-bold text-accent-green">STEP THREE</span>
+                        <h3 class="text-3xl font-bold">Capture or Import</h3>
+                        <p class="text-lg text-gray-400">
+                            Tap any Button and get the image into the box
+                        </p>
+                    </div>
+                    <div class="md:order-2 order-1 flex justify-center">
+                        <img src="img/step3.png" alt="App Analysis Screen Screenshot" class="w-full max-w-sm rounded-[2rem] mockup-frame object-cover">
+                    </div>
+                </div>
+                
+                <!-- STEP 4: Results & Data Preview -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-dark-neutral p-8 rounded-2xl shadow-dark-lift">
+                    <div class="md:order-2 order-2 space-y-4">
+                        <span class="text-xl font-bold text-accent-green">STEP FOUR</span>
+                        <h3 class="text-3xl font-bold">Analyze & Identify</h3>
+                        <p class="text-lg text-gray-400">
+                            Tap the "Analyze Plant button. This sends the image to the powerful PlantNet API, which uses AI to provide the most likely species and confidence scores.
+                        </p>
+                    </div>
+                    <div class="md:order-1 order-1 flex justify-center">
+                        <img src="img/step4.png" alt="App Results Screen Screenshot" class="w-full max-w-sm rounded-[2rem] mockup-frame object-cover">
+                    </div>
+                </div>
+                
+                <!-- STEP 5: Care & Conclusion -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-dark-neutral p-8 rounded-2xl shadow-dark-lift">
+                    <div class="md:order-1 order-2 space-y-4">
+                        <span class="text-xl font-bold text-accent-green">STEP FIVE</span>
+                        <h3 class="text-3xl font-bold">Detailed Data Preview and Timely Care & Conclusion</h3>
+                        <p class="text-lg text-gray-400">
+                            View the full identification results, including scientific names and your final step is getting personalized care instructions. 
+                            PlantPal makes your job easier by reminding you to water and nourish your plants, ensuring their health and growth.
+                        </p>
+                    </div>
+                    <div class="md:order-2 order-1 flex justify-center">
+                        <img src="img/step5.png" alt="App Care Reminders Screen Screenshot" class="w-full max-w-sm rounded-[2rem] mockup-frame object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download and Contact Footer -->
+    <footer id="download-link" class="bg-gray-900 py-16 text-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            
+            <h2 class="text-4xl font-bold mb-4 text-accent-green">Ready to Enhance Your Garden?</h2>
+            <p class="text-xl mb-8 text-gray-400 max-w-3xl mx-auto">
+                Start your journey towards easier, more organized plant care today.
+            </p>
+
+            <!-- Download Button (Repeated) -->
+            <!-- IMPORTANT: Replace '#' with your actual APK download link or Play Store link -->
+            <a href="#" class="inline-block px-12 py-5 text-xl font-bold text-white-900 bg-accent-green rounded-xl shadow-light-lift transition duration-300 transform hover:scale-105 hover:bg-green-400 focus:outline-none focus:ring-4 focus:ring-green-300">
+                Get the PlantPal App
+            </a>
+            
+            <div class="mt-16 border-t border-gray-700 pt-8">
+                <h3 class="text-2xl font-semibold mb-6">Contact & Project Info</h3>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400">
+                    <p class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        <a href="mailto:hello@plantpalcare.com" class="hover:underline">saksham.mahnot@mca.christuniversity.in</a>
+                    </p>
+                    <p class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" /></svg>
+                        +91XXXXXXXXX
+                    </p>
+                    <p class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        Christ University, NCR Campus
+                    </p>
+                </div>
+
+                <p class="mt-8 text-sm text-gray-500">
+                    Project by: Saksham Mahnot, Aaron Singh  &amp; Avika Sharma (Christ University)
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

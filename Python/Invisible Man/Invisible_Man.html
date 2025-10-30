@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invisible Man - AI/ML</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Font */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* Dark Slate Blue/Navy background */
+            color: #E2E8F0; /* Off-White text */
+        }
+        .text-tech-blue {
+            color: #38BDF8; /* Sky Blue accent */
+        }
+        .bg-tech-dark {
+            background-color: #1E293B; /* Slightly lighter slate for contrast */
+        }
+        .shadow-tech {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+        }
+        /* Style for the responsive video container (Laptop Aspect Ratio) */
+        .video-container {
+            position: relative;
+            /* 16:10 Aspect Ratio common for modern laptops (62.5%) or 16:9 (56.25%) */
+            padding-bottom: 58%; 
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 12px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .code-font {
+            font-family: 'Roboto Mono', monospace;
+        }
+        /* New Team Member Card Style */
+        .member-card {
+            border: 1px solid #334155; /* Slate 700 border */
+            transition: all 0.3s ease;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(56, 189, 248, 0.15); /* Subtle blue glow on hover */
+            border-color: #38BDF8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Hero Section -->
+    <header class="bg-tech-dark text-white py-20 sm:py-32">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-6xl sm:text-7xl font-extrabold mb-4 tracking-tighter">
+                The Invisible Man Project
+            </h1>
+            <p class="text-xl sm:text-2xl font-light max-w-4xl mx-auto mb-10 text-gray-400">
+                 A Group Project: Real-time cloaking effect implemented using Python , OpenCV, and AI/ML principles like color segmentation and background subtraction.
+            </p>
+            
+            <!-- Key Details Bar -->
+            <div class="flex flex-wrap justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-lg font-semibold">
+                <span class="px-4 py-2 bg-tech-blue/20 rounded-lg text-tech-blue">
+                    Tech Stack: Python, OpenCV, NumPy, Tkinter
+                </span>
+                <span class="px-4 py-2 bg-tech-blue/20 rounded-lg text-tech-blue">
+                    Application Type: Desktop GUI (Tkinter)
+                </span>
+                <span class="px-4 py-2 bg-tech-blue/20 rounded-lg text-tech-blue">
+                    Core Algorithm: HSV Color Segmentation
+                </span>
+            </div>
+            
+            <!-- GitHub Link (Placeholder) -->
+            <a href="#github-repo-link" class="mt-10 inline-block px-10 py-4 text-lg font-bold text-white-900 bg-tech-blue rounded-lg shadow-tech transition duration-300 hover:bg-sky-400 focus:outline-none focus:ring-4 focus:ring-sky-500">
+                View Source Code on GitHub
+            </a>
+        </div>
+    </header>
+
+    <!-- Technical Overview Section -->
+    <section id="technical-overview" class="py-20 sm:py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-tech-blue">How the Magic Works: Algorithm Breakdown</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <!-- Step 1: Background Capture -->
+                <div class="p-6 bg-tech-dark rounded-xl shadow-tech border-t-4 border-tech-blue">
+                    <h3 class="text-2xl font-semibold mb-3">1. Background Capture</h3>
+                    <p class="text-gray-400">
+                        The core function first captures a static frame of the scene  without the target object . This `self.background` image is crucial for the replacement step. It auto-updates every 3 seconds for dynamic environments.
+                    </p>
+                    <p class="code-font text-sm mt-3 text-green-400">
+                        // Capture initial background...<br>
+                        `self.background = np.flip(frame, axis=1)`
+                    </p>
+                </div>
+                
+                <!-- Step 2: Color Segmentation (HSV) -->
+                <div class="p-6 bg-tech-dark rounded-xl shadow-tech border-t-4 border-tech-blue">
+                    <h3 class="text-2xl font-semibold mb-3">2. Color Segmentation (HSV)</h3>
+                    <p class="text-gray-400">
+                        The live camera frame is converted to the  HSV color space  for robust color detection. A mask is created using user-defined (or preset) HSV ranges (e.g., Red or Green) to isolate the cloaking fabric.
+                    </p>
+                    <p class="code-font text-sm mt-3 text-green-400">
+                        `hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)`<br>
+                        `mask = cv2.inRange(hsv, lower_bound, upper_bound)`
+                    </p>
+                </div>
+
+                <!-- Step 3: Mask Refining & Blending -->
+                <div class="p-6 bg-tech-dark rounded-xl shadow-tech border-t-4 border-tech-blue">
+                    <h3 class="text-2xl font-semibold mb-3">3. Mask Refining & Blending</h3>
+                    <p class="text-gray-400">
+                        The raw mask is cleaned using morphological operations (`cv2.morphologyEx`) to remove noise. The final image is created by blending the background where the mask is present and the live frame where the mask is absent.
+                    </p>
+                    <p class="code-font text-sm mt-3 text-green-400">
+                        `res1 = cv2.bitwise_and(bg, bg, mask=mask)`<br>
+                        `final = cv2.addWeighted(res1, 1, res2, 1, 0)`
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Showcase Section (Video + 2 Photos) -->
+    <section id="media-showcase" class="py-20 sm:py-24 bg-tech-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-tech-blue">Live Demonstration & Application Screenshots</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <!-- Image Slot 1: Live Feed with GUI -->
+                <div class="lg:col-span-1 p-6 rounded-2xl shadow-tech border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4 text-center">Screenshot: Live Feed and Controls</h3>
+                    <div class="flex justify-center">
+                         <img src="./media/ss1.png" 
+                            alt="Screenshot of the Tkinter GUI showing controls and video feed" 
+                            class="w-full rounded-lg object-cover border border-gray-600">
+                    </div>
+                    <p class="mt-4 text-gray-400 text-center text-sm">
+                        The full Tkinter interface, demonstrating real-time video output and the customizable HSV controls.
+                    </p>
+                </div>
+
+                <!-- Video Embedding Slot (Takes up 2/3 width) -->
+                <div class="lg:col-span-2 p-6 rounded-2xl shadow-tech border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4">Video Demo (Laptop Resolution)</h3>
+                    <div class="video-container rounded-lg">
+                        <!-- IMPORTANT: Replace the 'src' attribute below with your actual video embed URL -->
+                        <iframe 
+                            src="https://www.youtube.com/embed/NIBLx6h1MwQ?si=rkNHNAlH0Bj0Vwkz" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Image Slot 2: Final Effect Output -->
+                <div class="lg:col-span-3 p-6 rounded-2xl shadow-tech border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4 text-center">Screenshot: The Final Cloaking Effect</h3>
+                    <div class="flex justify-center">
+                        <img src="./media/ss2.png" 
+                            alt="Wide screenshot showing the chroma key effect successfully in action" 
+                            class="w-full max-w-5xl rounded-lg object-cover border border-gray-600">
+                    </div>
+                    <p class="mt-4 text-gray-400 text-center text-sm">
+                        The result of combining the captured background and the processed live frame.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team & Contribution Section (New Design) -->
+    <section id="team" class="py-20 sm:py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center text-tech-blue">Team & Contribution</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                
+                <!-- Member 1 Card -->
+                <div class="member-card p-6 bg-tech-dark rounded-xl text-center shadow-lg">
+                    <p class="text-2xl font-bold text-white mb-2">Saksham Mahnot</p>
+                    <p class="text-sm text-tech-blue font-semibold uppercase tracking-wider">Christ University</p>
+                </div>
+                
+                <!-- Member 2 Card -->
+                <div class="member-card p-6 bg-tech-dark rounded-xl text-center shadow-lg">
+                    <p class="text-2xl font-bold text-white mb-2">Alphine PJ</p>
+                    <p class="text-sm text-tech-blue font-semibold uppercase tracking-wider">Christ University</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA and Footer -->
+    <footer id="footer" class="bg-gray-900 py-16 text-gray-400">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            
+            <!-- GitHub Link (Final CTA) -->
+            <h2 class="text-3xl font-bold mb-6 text-tech-blue">View Repository</h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-10">
+                Explore the complete source code, technical documentation, and setup instructions.
+            </p>
+            <a href="#github-repo-link" class="inline-block px-10 py-4 text-xl font-bold text-gray-900 bg-tech-blue rounded-lg shadow-tech transition duration-300 hover:bg-sky-400 focus:outline-none focus:ring-4 focus:ring-sky-500">
+                Go to GitHub
+            </a>
+
+            <div class="mt-16 border-t border-gray-700 pt-8 text-gray-500 text-sm">
+                Project developed using Computer Vision techniques for educational and demonstration purposes.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
