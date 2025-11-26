@@ -9,7 +9,11 @@
 /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>1450px */
 
 
-@media (max-width: 1450px) {
+@media screen and (max-width: 1450px) {
+  .timeline{
+    height: 100px !important;
+  }
+
   .sub_section_bar div {
     padding: 20px 0;
   }
@@ -71,9 +75,9 @@
     height: 450px !important;
   }
 
-  .code_line {
-    width: 600px !important;
-  }
+  /* .code_line {
+    max-width: 600px !important;
+  } */
 
   .timeline {
     margin-top: 150px !important;
@@ -151,9 +155,6 @@
 
 
 @media screen and (max-width: 880px) {
-  html {
-    width: 105vw;
-  }
   .section_two {
     height: 35vh !important;
   }
@@ -168,10 +169,12 @@
 
 @media screen and (max-width: 830px) {
   .section_first {
-    width: 105vw !important;
+    width: 100vw;
   }
   .section_first div {
-    width: 500px !important;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .container p {
@@ -226,7 +229,7 @@
     flex-basis: 100% !important;
   }
   .code_line {
-    width: 550px !important;
+    max-width: 550px !important;
   }
 
   .timeline {
@@ -248,6 +251,7 @@
 
   #bio{
     font-size: 45px !important;
+    height: 500px !important;
   }
 
 }
@@ -256,16 +260,8 @@
 
 
 @media screen and (max-width: 732px) {
-  html {
-    width: 120vw;
-  }
-
   .section_first {
-    width: 120vw;
-  }
-
-  .home div {
-    width: 120vw;
+    width: 100vw;
   }
 
   .item_two h1 {
@@ -275,7 +271,7 @@
   }
 
   .sub_section_bar div {
-    width: 120vw;
+    width: 100%;
   }
 }
 
@@ -283,9 +279,6 @@
 
 
 @media screen and (max-width: 660px) {
-  html {
-    width: 189vw;
-  }
 
   .section_first {
     width: 100vw;
@@ -293,8 +286,9 @@
   }
 
   .section_first div {
-    width: 500px;
-    margin: 0 80px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 24px;
   }
 
   .container p {
@@ -310,12 +304,12 @@
   }
 
   .sub_section_bar .bar2{
-    height: 50px !important;
-    width: 102.5vw !important;
+    height: 50px;
+    width: 100%;
   }
 
   .sub_section_bar div {
-    width: 188vw !important;
+    width: 100%;
   }
 
   .bar h1 {
@@ -365,12 +359,12 @@
     flex-basis: 100% !important;
   }
   .code_line {
-    width: 440px !important;
+    /* max-width: 100%; */
   }
 
   .timeline {
-    height: 990px !important;
-    margin-bottom: -11px !important;
+    height: auto;
+    margin-bottom: 80px;
   }
 
   .code_line div {
@@ -379,11 +373,12 @@
   }
 
   .contact_form form {
-    width: 400px !important;
+    width: 100%;
+    padding: 0 16px;
   }
 
   .connect div h6 {
-    width: 556px !important;
+    width: 90%;
   }
 
   .btn,
@@ -424,8 +419,8 @@
  }
 
  .sub_section_bar .bar2{
-  height: 50px !important;
-  width: 102.5vw !important;
+  height: 50px;
+  width: 100%;
 }
 
 .btn,
@@ -453,8 +448,8 @@
 @media screen and (max-width: 550px) {
     
   .sub_section_bar .bar2{
-    height: 50px !important;
-    width: 103.3vw !important;
+    height: 50px;
+    width: 100%;
   }
     .item_two h1 {
      font-size: 2.4rem;
@@ -472,16 +467,16 @@
    }
  
    .offset {
-     flex-basis: 100% !important;
-     max-width: 90% !important;
+     flex-basis: 100%;
+     max-width: 100%;
    }
    .code_line {
-     width: 350px !important;
+     max-width: 100%;
    }
  
    .timeline {
-     height: 990px !important;
-     margin-bottom: -11px !important;
+     height: auto;
+     margin-bottom: 80px;
    }
 
    .section_three {
@@ -489,7 +484,7 @@
   }
 
    .bio{
-    width: 350px !important;
+    width: 90%;
    }
    #bio {
     margin: 1px auto !important;
@@ -502,7 +497,8 @@
    }
 
    .contact_form form {
-    width: 350px !important;
+    width: 100%;
+    padding: 0 16px;
   }
 
   .connect div h1{
@@ -565,8 +561,8 @@
   }
 
   .sub_section_bar .bar2{
-    height: 30px !important;
-    width: 104.2vw !important;
+    height: 30px;
+    width: 100%;
   }
 
   .item_two h1 {
@@ -615,17 +611,17 @@
   }
 
   .offset {
-    flex-basis: 100% !important;
-    max-width: 90% !important;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 
   .code_line {
-    width: 280px !important;
+    max-width: 100%;
   }
 
   .timeline {
-    height: 700px !important;
-    margin-bottom: 300px !important;
+    height: auto;
+    margin-bottom: 120px;
   }
 
   .code_line div {
@@ -634,7 +630,8 @@
   }
 
   .contact_form form {
-    width: 300px !important;
+    width: 100%;
+    padding: 0 16px;
   }
 
   .btns {
@@ -694,8 +691,8 @@
   }
 
   .sub_section_bar .bar2{
-    height: 50px !important;
-    width: 104.5vw !important;
+    height: 50px;
+    width: 100%;
   }
 
   .resume{
@@ -752,17 +749,17 @@
     font-size: 25px !important;
   }
   .offset {
-    flex-basis: 100% !important;
-    max-width: 90% !important;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 
   .code_line {
-    width: 230px !important;
+    max-width: 100%;
   }
 
   .timeline {
-    height: 700px !important;
-    margin-bottom: 290px !important;
+    height: auto;
+    margin-bottom: 120px;
   }
 
   .code_line div {
@@ -771,7 +768,8 @@
   }
 
   .contact_form form {
-    width: 250px !important;
+    width: 100%;
+    padding: 0 16px;
   }
 
   .btn,
