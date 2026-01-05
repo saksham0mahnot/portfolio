@@ -10,7 +10,7 @@
 
 
 @media screen and (max-width: 1450px) {
-  .timeline{
+  .timeline {
     height: 100px !important;
   }
 
@@ -22,7 +22,7 @@
     font-size: 50px;
   }
 
-  .sub_section_bar .bar2{
+  .sub_section_bar .bar2 {
     height: 90px !important;
   }
 }
@@ -47,7 +47,7 @@
     font-size: 25px;
   }
 
-  .sub_section_bar .bar2{
+  .sub_section_bar .bar2 {
     height: 80px !important;
   }
 
@@ -64,7 +64,7 @@
   }
 
   .info h1 {
-    margin: 5px 0 50px 120px !important ;
+    margin: 5px 0 50px 120px !important;
   }
 
   .fullname h1 {
@@ -91,7 +91,7 @@
 
 @media (max-width: 998px) {
   .section_first div {
-    width: 520px  !important;
+    width: 520px !important;
   }
 
   .container p {
@@ -105,13 +105,13 @@
   .container h3 {
     font-size: 18px;
   }
-  
-  .resume{
+
+  .resume {
     padding: 9px 20px !important;
     font-size: 15px !important;
   }
 
-  .sub_section_bar .bar2{
+  .sub_section_bar .bar2 {
     height: 50px !important;
     width: 102vw !important;
   }
@@ -158,6 +158,7 @@
   .section_two {
     height: 35vh !important;
   }
+
   .item_two h1 {
     font-size: 4.7rem;
     line-height: normal;
@@ -171,6 +172,7 @@
   .section_first {
     width: 100vw;
   }
+
   .section_first div {
     width: 100%;
     max-width: 500px;
@@ -228,6 +230,7 @@
   .offset {
     flex-basis: 100% !important;
   }
+
   .code_line {
     max-width: 550px !important;
   }
@@ -245,11 +248,11 @@
     width: 650px !important;
   }
 
-  .bio{
+  .bio {
     width: 660px !important;
   }
 
-  #bio{
+  #bio {
     font-size: 45px !important;
     height: 500px !important;
   }
@@ -303,7 +306,7 @@
     font-size: 17px;
   }
 
-  .sub_section_bar .bar2{
+  .sub_section_bar .bar2 {
     height: 50px;
     width: 100%;
   }
@@ -327,6 +330,7 @@
     height: 1200px !important;
     margin-bottom: 0px !important;
   }
+
   .section_three .lab h1 {
     margin: 0 0 50px 10px;
   }
@@ -347,6 +351,7 @@
   .bio {
     width: 410px !important;
   }
+
   #bio {
     font-size: 35px !important;
   }
@@ -358,6 +363,7 @@
   .offset {
     flex-basis: 100% !important;
   }
+
   .code_line {
     /* max-width: 100%; */
   }
@@ -413,17 +419,17 @@
     font-size: 13px !important;
   }
 
-  .resume{
+  .resume {
     padding: 7px 15px !important;
     font-size: 13px !important;
- }
+  }
 
- .sub_section_bar .bar2{
-  height: 50px;
-  width: 100%;
-}
+  .sub_section_bar .bar2 {
+    height: 50px;
+    width: 100%;
+  }
 
-.btn,
+  .btn,
   .btn2 {
     margin: 30px 5px !important;
     font-size: 20px !important;
@@ -431,12 +437,12 @@
     background-position: 0 25% !important;
   }
 
-  .bottom_resume{
+  .bottom_resume {
     padding: 10px 30px !important;
     font-size: 16px !important;
   }
 
-  .section_five{
+  .section_five {
     margin-bottom: -80px !important;
   }
 
@@ -446,62 +452,66 @@
 
 
 @media screen and (max-width: 550px) {
-    
-  .sub_section_bar .bar2{
+
+  .sub_section_bar .bar2 {
     height: 50px;
     width: 100%;
   }
-    .item_two h1 {
-     font-size: 2.4rem;
-     line-height: normal;
-     cursor: none;
-   }
-   .section_two {
-     height: 10vh !important;
-     padding: 50px 20px 150px 20px !important;
-     margin: 50px 0 150px 0;
-   }
- 
-   .fullname h1 {
-     font-size: 50px !important;
-   }
- 
-   .offset {
-     flex-basis: 100%;
-     max-width: 100%;
-   }
-   .code_line {
-     max-width: 100%;
-   }
- 
-   .timeline {
-     height: auto;
-     margin-bottom: 80px;
-   }
 
-   .section_three {
+  .item_two h1 {
+    font-size: 2.4rem;
+    line-height: normal;
+    cursor: none;
+  }
+
+  .section_two {
+    height: 10vh !important;
+    padding: 50px 20px 150px 20px !important;
+    margin: 50px 0 150px 0;
+  }
+
+  .fullname h1 {
+    font-size: 50px !important;
+  }
+
+  .offset {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .code_line {
+    max-width: 100%;
+  }
+
+  .timeline {
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  .section_three {
     margin-bottom: -50px !important;
   }
 
-   .bio{
+  .bio {
     width: 90%;
-   }
-   #bio {
+  }
+
+  #bio {
     margin: 1px auto !important;
     font-size: 25px !important;
   }
- 
-   .code_line div {
-     font-size: 13px !important;
-     line-height: 23.3px;
-   }
 
-   .contact_form form {
+  .code_line div {
+    font-size: 13px !important;
+    line-height: 23.3px;
+  }
+
+  .contact_form form {
     width: 100%;
     padding: 0 16px;
   }
 
-  .connect div h1{
+  .connect div h1 {
     font-size: 70px !important;
   }
 
@@ -519,22 +529,22 @@
     background-position: 0 25% !important;
   }
 
-  .bottom_resume{
+  .bottom_resume {
     padding: 10px 30px !important;
     font-size: 16px !important;
   }
 
-  .section_five{
+  .section_five {
     margin-bottom: -80px !important;
   }
 
-  .foot_one{
+  .foot_one {
     font-size: 11px !important;
   }
 
- }
+}
 
- /* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>420px */
+/* ===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>420px */
 
 
 @media screen and (max-width: 420px) {
@@ -560,7 +570,7 @@
     font-size: 15px !important;
   }
 
-  .sub_section_bar .bar2{
+  .sub_section_bar .bar2 {
     height: 30px;
     width: 100%;
   }
@@ -585,6 +595,7 @@
   .box1 {
     width: 70% !important;
   }
+
   .box1 h1 {
     margin: 10px !important;
     font-size: 25px !important;
@@ -660,6 +671,7 @@
   footer {
     padding: 30px !important;
   }
+
   .foot_one {
     font-size: 10px !important;
     line-height: 21px;
@@ -676,7 +688,8 @@
 
   .section_first div {
     width: auto;
-    margin: 0 auto !important;  }
+    margin: 0 auto !important;
+  }
 
   .container p {
     font-size: 8px;
@@ -690,21 +703,22 @@
     font-size: 12px;
   }
 
-  .sub_section_bar .bar2{
+  .sub_section_bar .bar2 {
     height: 50px;
     width: 100%;
   }
 
-  .resume{
+  .resume {
     padding: 5px 12px !important;
     font-size: 12px !important;
- }
+  }
 
   .section_two {
     height: 5vh !important;
     padding: 20px !important;
     margin: 20px 0 190px 0;
   }
+
   .item_two h1 {
     font-size: 1.5rem !important;
     line-height: normal;
@@ -720,6 +734,7 @@
   .box1 {
     width: 70% !important;
   }
+
   .box1 h1 {
     margin: 10px !important;
     font-size: 23px !important;
@@ -748,6 +763,7 @@
   #bio {
     font-size: 25px !important;
   }
+
   .offset {
     flex-basis: 100%;
     max-width: 100%;
@@ -793,6 +809,7 @@
   footer {
     padding: 30px !important;
   }
+
   .foot_one {
     font-size: 8.5px !important;
     line-height: 21px;
