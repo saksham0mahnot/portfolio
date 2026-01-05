@@ -364,11 +364,8 @@
     flex-basis: 100% !important;
   }
 
-  .code_line {
-    /* max-width: 100%; */
-  }
-
   .timeline {
+
     height: auto;
     margin-bottom: 80px;
   }

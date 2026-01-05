@@ -376,10 +376,9 @@ hr {
 }
 
 .section_three {
-    height: 1300px;
+    /* height: 1300px; */
     background-color: #1c1c1c;
-    padding-top: 100px;
-    margin-bottom: 200px !important;
+    padding: 100px 40px;
 }
 
 .lab h1 {
